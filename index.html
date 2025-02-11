@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classwork1</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div class="firstdiv" id="firstdiv"></div>
+ <div class="seconddiv" id="seconddiv"></div>
+ <div class="lastdiv" id="lastdiv"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    
+    <script>
+      let heading=React.createElement("h1",{id:"heading"},"My First Project");
+      let root=ReactDOM.createRoot(document.getElementById("root"));
+      root.render(heading);
+      let paragraph=React.createElement("p",{id:"p1"},"My First Paragraph of first project");
+      let div1=ReactDOM.createRoot(document.getElementById("firstdiv"));
+      div1.render(paragraph);
+  let paragraph2=React.createElement("p",{id:"p2"},"this is my second paragraph of the second div");
+  let link=React.createElement("a",{id:"a"},"See more");
+
+  let secondDivContent = React.createElement("div", {}, paragraph2, link);
+ 
+  let div2=ReactDOM.createRoot(document.getElementById("seconddiv"));
+  div2.render(secondDivContent);
+
+  let paragraph3=React.createElement("p",{id:"p3"},"This is my third paragraph of the third div");
+  let div3=ReactDOM.createRoot(document.getElementById("lastdiv"));
+  div3.render(paragraph3);
+    </script>
+  </body>
+</html>
