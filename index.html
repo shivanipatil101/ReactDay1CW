@@ -4,12 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Classwork1</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      #root {
+        margin-top: 20px;
+      }
+
+      .firstdiv,
+      .seconddiv,
+      .lastdiv {
+        margin: 20px auto;
+        padding: 15px;
+        width: 60%;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .firstdiv {
+        background-color: #ffebcd;
+      }
+
+      .seconddiv {
+        background-color: #add8e6;
+      }
+
+      .lastdiv {
+        background-color: #98fb98;
+      }
+
+      p {
+        font-size: 18px;
+        color: #333;
+      }
+
+      a {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      a:hover {
+        background-color: #0056b3;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <div class="firstdiv" id="firstdiv"></div>
- <div class="seconddiv" id="seconddiv"></div>
- <div class="lastdiv" id="lastdiv"></div>
+    <div class="seconddiv" id="seconddiv"></div>
+    <div class="lastdiv" id="lastdiv"></div>
+
     <script
       crossorigin
       src="https://unpkg.com/react@18/umd/react.development.js"
@@ -18,25 +74,38 @@
       crossorigin
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
-    
+
     <script>
-      let heading=React.createElement("h1",{id:"heading"},"My First Project");
-      let root=ReactDOM.createRoot(document.getElementById("root"));
+      let heading = React.createElement("h1", { id: "heading" }, "My First React Project");
+      let root = ReactDOM.createRoot(document.getElementById("root"));
       root.render(heading);
-      let paragraph=React.createElement("p",{id:"p1"},"My First Paragraph of first project");
-      let div1=ReactDOM.createRoot(document.getElementById("firstdiv"));
-      div1.render(paragraph);
-  let paragraph2=React.createElement("p",{id:"p2"},"this is my second paragraph of the second div");
-  let link=React.createElement("a",{id:"a"},"See more");
 
-  let secondDivContent = React.createElement("div", {}, paragraph2, link);
- 
-  let div2=ReactDOM.createRoot(document.getElementById("seconddiv"));
-  div2.render(secondDivContent);
+      let paragraph1 = React.createElement(
+        "p",
+        { id: "p1" },
+        "React.js is a JavaScript library for building user interfaces. It allows developers to create reusable UI components."
+      );
+      let div1 = ReactDOM.createRoot(document.getElementById("firstdiv"));
+      div1.render(paragraph1);
 
-  let paragraph3=React.createElement("p",{id:"p3"},"This is my third paragraph of the third div");
-  let div3=ReactDOM.createRoot(document.getElementById("lastdiv"));
-  div3.render(paragraph3);
+      let paragraph2 = React.createElement(
+        "p",
+        { id: "p2" },
+        "React uses a virtual DOM to improve performance and efficiently update the UI without reloading the entire page."
+      );
+      let link = React.createElement("a", { id: "a", href: "https://react.dev/" }, "Learn More");
+
+      let secondDivContent = React.createElement("div", {}, paragraph2, link);
+      let div2 = ReactDOM.createRoot(document.getElementById("seconddiv"));
+      div2.render(secondDivContent);
+
+      let paragraph3 = React.createElement(
+        "p",
+        { id: "p3" },
+        "React components can be functional or class-based. Functional components are simpler and use React Hooks for state management."
+      );
+      let div3 = ReactDOM.createRoot(document.getElementById("lastdiv"));
+      div3.render(paragraph3);
     </script>
   </body>
 </html>
