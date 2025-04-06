@@ -76,14 +76,14 @@
     ></script>
 
     <script>
-      let heading = React.createElement("h1", { id: "heading" }, "My First React Project");
+      let heading = React.createElement("h1", { id: "heading" }, "Learn Web Development");
       let root = ReactDOM.createRoot(document.getElementById("root"));
       root.render(heading);
 
       let paragraph1 = React.createElement(
         "p",
         { id: "p1" },
-        "React.js is a JavaScript library for building user interfaces. It allows developers to create reusable UI components."
+        "Welcome to the MDN learning area. This set od articles aims to guide complete beginners to web development with all that ther need to start coding websites."
       );
       let div1 = ReactDOM.createRoot(document.getElementById("firstdiv"));
       div1.render(paragraph1);
@@ -91,8 +91,7 @@
       let paragraph2 = React.createElement(
         "p",
         { id: "p2" },
-        "React uses a virtual DOM to improve performance and efficiently update the UI without reloading the entire page."
-      );
+        "The aim of this area of MDN is not to take you from beginner to expert but to take you from beginner to comfortable . from here,you should be able to start making you way ,learning from the rest of MDN and other intermediate to advanced resources that assume a lot of previous knowledge."
       let link = React.createElement("a", { id: "a", href: "https://react.dev/" }, "Learn More");
 
       let secondDivContent = React.createElement("div", {}, paragraph2, link);
@@ -102,7 +101,7 @@
       let paragraph3 = React.createElement(
         "p",
         { id: "p3" },
-        "React components can be functional or class-based. Functional components are simpler and use React Hooks for state management."
+        "If you are a complete beginner , web development can be challenging -- we will hold your hand and provide enough detail for you to feel comfortable and learn the topics properly. You should be feel at home whether you are a student learning web development (on your own or a a part of a class), a teacher looking for class materials , a hobbyist ,or someone who just wants to understood more about how web teachnologies work"
       );
       let div3 = ReactDOM.createRoot(document.getElementById("lastdiv"));
       div3.render(paragraph3);
